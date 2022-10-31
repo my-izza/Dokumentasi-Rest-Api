@@ -1,0 +1,1448 @@
+{
+	"info": {
+		"_postman_id": "7732b15e-35b4-4ffa-b1df-09434d1b8512",
+		"name": "Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24071707"
+	},
+	"item": [
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Mengambil data task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Mengambil data task",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 07:30:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2020"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": \"3\",\n            \"category_id\": \"7\",\n            \"title\": \"Analisis market size produk AAA\",\n            \"description\": \"Market size adalah persentase dari total pendapatan atau penjualan di pasar yang dibuat oleh bisnis perusahaan. Misalnya, jika ada 50.000 unit terjual per tahun di industri tertentu, perusahaan yang penjualannya 5.000 unit akan memiliki 10 persen pangsa pasar itu.\",\n            \"start_date\": \"2022-10-03\",\n            \"finish_date\": \"2022-10-10\",\n            \"status\": \"Finish\"\n        },\n        {\n            \"id\": \"4\",\n            \"category_id\": \"5\",\n            \"title\": \"Prototype Aplikasi Buku Pintar\",\n            \"description\": \"Prototype adalah standar ukuran dari sebuah entitas. Dalam bidang desain, sebuah prototipe dibuat sebelum dikembangkan atau justru dibuat khusus untuk pengembangan sebelum dibuat dalam skala sebenarnya atau sebelum diproduksi secara massal\",\n            \"start_date\": \"2022-10-10\",\n            \"finish_date\": \"2022-10-17\",\n            \"status\": \"On Progress\"\n        },\n        {\n            \"id\": \"5\",\n            \"category_id\": \"6\",\n            \"title\": \"Pembuatan UI / UX aplikasi Buku Pintar\",\n            \"description\": \"UI Design adalah tampilan produk yang ingin kita perlihatkan (yang visible atau bisa dilihat oleh mata). UX adalah memastikan bahwa langkah demi langkah berjalan dengan logis dan jelas, serta memahami kebutuhan user\",\n            \"start_date\": \"2022-10-24\",\n            \"finish_date\": \"2022-11-07\",\n            \"status\": \"New\"\n        },\n        {\n            \"id\": \"6\",\n            \"category_id\": \"8\",\n            \"title\": \"Pengembangan Aplikasi Buku Pintar\",\n            \"description\": \"Developer adalah adalah profesi yang menulis program perangkat lunak menggunakan bahasa pemrograman \",\n            \"start_date\": \"2022-11-14\",\n            \"finish_date\": \"2022-12-05\",\n            \"status\": \"New\"\n        },\n        {\n            \"id\": \"7\",\n            \"category_id\": \"8\",\n            \"title\": \"Pembuatan DBMS\",\n            \"description\": \"DBMS adalah DBMS atau database management system ini merupakan perangkat lunak (software) yang dipakai untuk membangun basis data yang berbasis komputerisasi.\",\n            \"start_date\": \"2022-09-12\",\n            \"finish_date\": \"2022-09-19\",\n            \"status\": \"Finish\"\n        },\n        {\n            \"id\": \"9\",\n            \"category_id\": \"7\",\n            \"title\": \"Analisis System Jadwal Pelajaran\",\n            \"description\": \"Analisis system kebutuhan client terkait aplikasi jadwal yang akan di buat\",\n            \"start_date\": \"2022-10-28\",\n            \"finish_date\": \"2022-10-31\",\n            \"status\": \"Finish\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Menghapus task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Menghapus task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "7",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 07:35:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"id\": \"7\",\n    \"message\": \"deleted!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Menambah task baru",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "category_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Analisis System Jadwal",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Analisis system kebutuhan client terkait aplikasi jadwal yang akan di buat",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-10-28",
+									"type": "text"
+								},
+								{
+									"key": "finish_date",
+									"value": "2022-10-31",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Finish",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Menambah task baru",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "category_id",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Analisis System Jadwal",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Analisis system kebutuhan client terkait aplikasi jadwal yang akan di buat",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-10-28",
+											"type": "text"
+										},
+										{
+											"key": "finish_date",
+											"value": "2022-10-31",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "Finish",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 07:33:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"new task  has been created!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Mengubah task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "category_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Analisis System Jadwal Pelajaran",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Analisis system kebutuhan client terkait aplikasi jadwal yang akan di buat",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-10-28",
+									"type": "text"
+								},
+								{
+									"key": "finish_date",
+									"value": "2022-10-30",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Finish",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Mengubah task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "category_id",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Analisis System Jadwal Pelajaran",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Analisis system kebutuhan client terkait aplikasi jadwal yang akan di buat",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-10-28",
+											"type": "text"
+										},
+										{
+											"key": "finish_date",
+											"value": "2022-10-30",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "Finish",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 07:34:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"task has been updated!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Categories Request",
+					"item": [
+						{
+							"name": "Mengambil data categories",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Mengambil data categories",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"rest-api",
+												"task-management",
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 31 Oct 2022 08:01:35 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.19"
+										},
+										{
+											"key": "Expires",
+											"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-store, no-cache, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Content-Length",
+											"value": "149"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": \"5\",\n            \"name\": \"Prototype\"\n        },\n        {\n            \"id\": \"6\",\n            \"name\": \"UI / UX Design\"\n        },\n        {\n            \"id\": \"7\",\n            \"name\": \"Analysis\"\n        },\n        {\n            \"id\": \"8\",\n            \"name\": \"Developer\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "mengubah category",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Front End",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Mengubah category",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Front End",
+													"type": "text"
+												},
+												{
+													"key": "id",
+													"value": "9",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"rest-api",
+												"task-management",
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 31 Oct 2022 08:05:08 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.19"
+										},
+										{
+											"key": "Expires",
+											"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-store, no-cache, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"category has been updated!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Menambah category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Back End ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Menambah category",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Back End ",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"rest-api",
+												"task-management",
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 31 Oct 2022 08:03:19 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.19"
+										},
+										{
+											"key": "Expires",
+											"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-store, no-cache, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "ci_session=ri5t451832pe8vcqkra50q0rr8dem4gf; expires=Mon, 31-Oct-2022 10:03:19 GMT; Max-Age=7200; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"new category  has been created!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Menghapus category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Menghapus category",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "9",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"rest-api",
+												"task-management",
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 31 Oct 2022 08:06:06 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.19"
+										},
+										{
+											"key": "Expires",
+											"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-store, no-cache, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Content-Length",
+											"value": "45"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"id\": \"9\",\n    \"message\": \"deleted!\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gagal mengambil data categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest-api/task-management/api/categories?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest-api",
+								"task-management",
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Gagal mengambil data categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories?id=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 08:14:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"massage\": \"id not found!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Gagal menambah category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "back end",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest-api",
+								"task-management",
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "back end",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Gagal menambah category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "back end",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "back end",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 08:14:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1318"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Database Error</title>\n        <style type=\"text/css\">\n\n::selection { background-color: #E13300; color: white; }\n::-moz-selection { background-color: #E13300; color: white; }\n\nbody {\n\tbackground-color: #fff;\n\tmargin: 40px;\n\tfont: 13px/20px normal Helvetica, Arial, sans-serif;\n\tcolor: #4F5155;\n}\n\na {\n\tcolor: #003399;\n\tbackground-color: transparent;\n\tfont-weight: normal;\n}\n\nh1 {\n\tcolor: #444;\n\tbackground-color: transparent;\n\tborder-bottom: 1px solid #D0D0D0;\n\tfont-size: 19px;\n\tfont-weight: normal;\n\tmargin: 0 0 14px 0;\n\tpadding: 14px 15px 10px 15px;\n}\n\ncode {\n\tfont-family: Consolas, Monaco, Courier New, Courier, monospace;\n\tfont-size: 12px;\n\tbackground-color: #f9f9f9;\n\tborder: 1px solid #D0D0D0;\n\tcolor: #002166;\n\tdisplay: block;\n\tmargin: 14px 0 14px 0;\n\tpadding: 12px 10px 12px 10px;\n}\n\n#container {\n\tmargin: 10px;\n\tborder: 1px solid #D0D0D0;\n\tbox-shadow: 0 0 8px #D0D0D0;\n}\n\np {\n\tmargin: 12px 15px 12px 15px;\n}\n</style>\n    </head>\n    <body>\n        <div id=\"container\">\n            <h1>A Database Error Occurred</h1>\n            <p>Error Number: 1048</p>\n            <p>Column 'name' cannot be null</p>\n            <p>INSERT INTO `task_categories` (`name`) VALUES (NULL)</p>\n            <p>Filename: C:/xampp/htdocs/rest-api/task-management/system/database/DB_driver.php</p>\n            <p>Line Number: 692</p>\n        </div>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "Gagal manghapus category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest-api",
+								"task-management",
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Gagal manghapus category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 08:12:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"massage\": \"id not found!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Gagal mengubah category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "back end",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest-api",
+								"task-management",
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Gagal mengubah category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "back end",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/rest-api/task-management/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"rest-api",
+										"task-management",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Oct 2022 08:13:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.19"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"massage\": \"failed to update category!\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

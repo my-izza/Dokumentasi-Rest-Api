@@ -1,0 +1,817 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Task Management
+  contact: {}
+host: example.com
+basePath: /
+securityDefinitions: {}
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /tasks:
+    get:
+      summary: Mengambil data task
+      tags:
+        - Tasks
+      operationId: Mengambildatatask
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Mengambildatatask'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              data:
+                - id: '3'
+                  category_id: '7'
+                  title: Analisis market size produk AAA
+                  description: Market size adalah persentase dari total pendapatan atau penjualan di pasar yang dibuat oleh bisnis perusahaan. Misalnya, jika ada 50.000 unit terjual per tahun di industri tertentu, perusahaan yang penjualannya 5.000 unit akan memiliki 10 persen pangsa pasar itu.
+                  start_date: '2022-10-03'
+                  finish_date: '2022-10-10'
+                  status: Finish
+                - id: '4'
+                  category_id: '5'
+                  title: Prototype Aplikasi Buku Pintar
+                  description: Prototype adalah standar ukuran dari sebuah entitas. Dalam bidang desain, sebuah prototipe dibuat sebelum dikembangkan atau justru dibuat khusus untuk pengembangan sebelum dibuat dalam skala sebenarnya atau sebelum diproduksi secara massal
+                  start_date: '2022-10-10'
+                  finish_date: '2022-10-17'
+                  status: On Progress
+                - id: '5'
+                  category_id: '6'
+                  title: Pembuatan UI / UX aplikasi Buku Pintar
+                  description: UI Design adalah tampilan produk yang ingin kita perlihatkan (yang visible atau bisa dilihat oleh mata). UX adalah memastikan bahwa langkah demi langkah berjalan dengan logis dan jelas, serta memahami kebutuhan user
+                  start_date: '2022-10-24'
+                  finish_date: '2022-11-07'
+                  status: New
+                - id: '6'
+                  category_id: '8'
+                  title: Pengembangan Aplikasi Buku Pintar
+                  description: 'Developer adalah adalah profesi yang menulis program perangkat lunak menggunakan bahasa pemrograman '
+                  start_date: '2022-11-14'
+                  finish_date: '2022-12-05'
+                  status: New
+                - id: '7'
+                  category_id: '8'
+                  title: Pembuatan DBMS
+                  description: DBMS adalah DBMS atau database management system ini merupakan perangkat lunak (software) yang dipakai untuk membangun basis data yang berbasis komputerisasi.
+                  start_date: '2022-09-12'
+                  finish_date: '2022-09-19'
+                  status: Finish
+                - id: '9'
+                  category_id: '7'
+                  title: Analisis System Jadwal Pelajaran
+                  description: Analisis system kebutuhan client terkait aplikasi jadwal yang akan di buat
+                  start_date: '2022-10-28'
+                  finish_date: '2022-10-31'
+                  status: Finish
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 07:30:48 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Content-Length:
+              type: string
+              default: '2020'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+    delete:
+      summary: Menghapus task
+      tags:
+        - Tasks
+      operationId: Menghapustask
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: id
+          in: formData
+          required: true
+          type: integer
+          format: int32
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Menghapustask'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              id: '7'
+              message: deleted!
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 07:35:57 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Content-Length:
+              type: string
+              default: '45'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+    post:
+      summary: Menambah task baru
+      tags:
+        - Tasks
+      operationId: Menambahtaskbaru
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: category_id
+          in: formData
+          required: true
+          type: integer
+          format: int32
+          description: ''
+        - name: title
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: description
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: start_date
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: finish_date
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: status
+          in: formData
+          required: true
+          type: string
+          description: ''
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/Menambahtaskbaru'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              message: new task  has been created!
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 07:33:02 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Content-Length:
+              type: string
+              default: '55'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+    put:
+      summary: Mengubah task
+      tags:
+        - Tasks
+      operationId: Mengubahtask
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: category_id
+          in: formData
+          required: true
+          type: integer
+          format: int32
+          description: ''
+        - name: title
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: description
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: start_date
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: finish_date
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: status
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: id
+          in: formData
+          required: true
+          type: integer
+          format: int32
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Mengubahtask'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              message: task has been updated!
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 07:34:42 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Content-Length:
+              type: string
+              default: '50'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+  /categories:
+    get:
+      summary: Mengambil data categories
+      tags:
+        - Categories Request
+      operationId: Mengambildatacategories
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Mengambildatacategories'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              data:
+                - id: '5'
+                  name: Prototype
+                - id: '6'
+                  name: UI / UX Design
+                - id: '7'
+                  name: Analysis
+                - id: '8'
+                  name: Developer
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 08:01:35 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Content-Length:
+              type: string
+              default: '149'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+    put:
+      summary: mengubah category
+      tags:
+        - Categories Request
+      operationId: mengubahcategory
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: name
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: id
+          in: formData
+          required: true
+          type: integer
+          format: int32
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Mengubahcategory'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              message: category has been updated!
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 08:05:08 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Content-Length:
+              type: string
+              default: '54'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+    post:
+      summary: Menambah category
+      tags:
+        - Categories Request
+      operationId: Menambahcategory
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: name
+          in: formData
+          required: true
+          type: string
+          description: ''
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/Menambahcategory'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              message: new category  has been created!
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 08:03:19 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Set-Cookie:
+              type: string
+              default: ci_session=ri5t451832pe8vcqkra50q0rr8dem4gf; expires=Mon, 31-Oct-2022 10:03:19 GMT; Max-Age=7200; path=/; HttpOnly; SameSite=Lax
+            Content-Length:
+              type: string
+              default: '59'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+    delete:
+      summary: Menghapus category
+      tags:
+        - Categories Request
+      operationId: Menghapuscategory
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: id
+          in: formData
+          required: true
+          type: integer
+          format: int32
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Menghapuscategory'
+          examples:
+            application/json; charset=utf-8:
+              status: true
+              id: '9'
+              message: deleted!
+          headers:
+            Date:
+              type: string
+              default: Mon, 31 Oct 2022 08:06:06 GMT
+            Server:
+              type: string
+              default: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.0.19
+            X-Powered-By:
+              type: string
+              default: PHP/8.0.19
+            Expires:
+              type: string
+              default: Thu, 19 Nov 1981 08:52:00 GMT
+            Cache-Control:
+              type: string
+              default: no-store, no-cache, must-revalidate
+            Pragma:
+              type: string
+              default: no-cache
+            Content-Length:
+              type: string
+              default: '45'
+            Keep-Alive:
+              type: string
+              default: timeout=5, max=100
+            Connection:
+              type: string
+              default: Keep-Alive
+definitions:
+  Mengambildatatask:
+    title: Mengambildatatask
+    example:
+      status: true
+      data:
+        - id: '3'
+          category_id: '7'
+          title: Analisis market size produk AAA
+          description: Market size adalah persentase dari total pendapatan atau penjualan di pasar yang dibuat oleh bisnis perusahaan. Misalnya, jika ada 50.000 unit terjual per tahun di industri tertentu, perusahaan yang penjualannya 5.000 unit akan memiliki 10 persen pangsa pasar itu.
+          start_date: '2022-10-03'
+          finish_date: '2022-10-10'
+          status: Finish
+        - id: '4'
+          category_id: '5'
+          title: Prototype Aplikasi Buku Pintar
+          description: Prototype adalah standar ukuran dari sebuah entitas. Dalam bidang desain, sebuah prototipe dibuat sebelum dikembangkan atau justru dibuat khusus untuk pengembangan sebelum dibuat dalam skala sebenarnya atau sebelum diproduksi secara massal
+          start_date: '2022-10-10'
+          finish_date: '2022-10-17'
+          status: On Progress
+        - id: '5'
+          category_id: '6'
+          title: Pembuatan UI / UX aplikasi Buku Pintar
+          description: UI Design adalah tampilan produk yang ingin kita perlihatkan (yang visible atau bisa dilihat oleh mata). UX adalah memastikan bahwa langkah demi langkah berjalan dengan logis dan jelas, serta memahami kebutuhan user
+          start_date: '2022-10-24'
+          finish_date: '2022-11-07'
+          status: New
+        - id: '6'
+          category_id: '8'
+          title: Pengembangan Aplikasi Buku Pintar
+          description: 'Developer adalah adalah profesi yang menulis program perangkat lunak menggunakan bahasa pemrograman '
+          start_date: '2022-11-14'
+          finish_date: '2022-12-05'
+          status: New
+        - id: '7'
+          category_id: '8'
+          title: Pembuatan DBMS
+          description: DBMS adalah DBMS atau database management system ini merupakan perangkat lunak (software) yang dipakai untuk membangun basis data yang berbasis komputerisasi.
+          start_date: '2022-09-12'
+          finish_date: '2022-09-19'
+          status: Finish
+        - id: '9'
+          category_id: '7'
+          title: Analisis System Jadwal Pelajaran
+          description: Analisis system kebutuhan client terkait aplikasi jadwal yang akan di buat
+          start_date: '2022-10-28'
+          finish_date: '2022-10-31'
+          status: Finish
+    type: object
+    properties:
+      status:
+        type: boolean
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/Datum'
+    required:
+      - status
+      - data
+  Datum:
+    title: Datum
+    example:
+      id: '3'
+      category_id: '7'
+      title: Analisis market size produk AAA
+      description: Market size adalah persentase dari total pendapatan atau penjualan di pasar yang dibuat oleh bisnis perusahaan. Misalnya, jika ada 50.000 unit terjual per tahun di industri tertentu, perusahaan yang penjualannya 5.000 unit akan memiliki 10 persen pangsa pasar itu.
+      start_date: '2022-10-03'
+      finish_date: '2022-10-10'
+      status: Finish
+    type: object
+    properties:
+      id:
+        type: string
+      category_id:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+      start_date:
+        type: string
+      finish_date:
+        type: string
+      status:
+        type: string
+    required:
+      - id
+      - category_id
+      - title
+      - description
+      - start_date
+      - finish_date
+      - status
+  Menghapustask:
+    title: Menghapustask
+    example:
+      status: true
+      id: '7'
+      message: deleted!
+    type: object
+    properties:
+      status:
+        type: boolean
+      id:
+        type: string
+      message:
+        type: string
+    required:
+      - status
+      - id
+      - message
+  Menambahtaskbaru:
+    title: Menambahtaskbaru
+    example:
+      status: true
+      message: new task  has been created!
+    type: object
+    properties:
+      status:
+        type: boolean
+      message:
+        type: string
+    required:
+      - status
+      - message
+  Mengubahtask:
+    title: Mengubahtask
+    example:
+      status: true
+      message: task has been updated!
+    type: object
+    properties:
+      status:
+        type: boolean
+      message:
+        type: string
+    required:
+      - status
+      - message
+  Mengambildatacategories:
+    title: Mengambildatacategories
+    example:
+      status: true
+      data:
+        - id: '5'
+          name: Prototype
+        - id: '6'
+          name: UI / UX Design
+        - id: '7'
+          name: Analysis
+        - id: '8'
+          name: Developer
+    type: object
+    properties:
+      status:
+        type: boolean
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/Datum1'
+    required:
+      - status
+      - data
+  Datum1:
+    title: Datum1
+    example:
+      id: '5'
+      name: Prototype
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+    required:
+      - id
+      - name
+  Mengubahcategory:
+    title: Mengubahcategory
+    example:
+      status: true
+      message: category has been updated!
+    type: object
+    properties:
+      status:
+        type: boolean
+      message:
+        type: string
+    required:
+      - status
+      - message
+  Menambahcategory:
+    title: Menambahcategory
+    example:
+      status: true
+      message: new category  has been created!
+    type: object
+    properties:
+      status:
+        type: boolean
+      message:
+        type: string
+    required:
+      - status
+      - message
+  Menghapuscategory:
+    title: Menghapuscategory
+    example:
+      status: true
+      id: '9'
+      message: deleted!
+    type: object
+    properties:
+      status:
+        type: boolean
+      id:
+        type: string
+      message:
+        type: string
+    required:
+      - status
+      - id
+      - message
+  Gagalmengambildatacategories1:
+    title: Gagalmengambildatacategories1
+    example:
+      status: false
+      massage: id not found!
+    type: object
+    properties:
+      status:
+        type: boolean
+      massage:
+        type: string
+    required:
+      - status
+      - massage
+  Gagalmanghapuscategory1:
+    title: Gagalmanghapuscategory1
+    example:
+      status: false
+      massage: id not found!
+    type: object
+    properties:
+      status:
+        type: boolean
+      massage:
+        type: string
+    required:
+      - status
+      - massage
+  Gagalmengubahcategory1:
+    title: Gagalmengubahcategory1
+    example:
+      status: false
+      massage: failed to update category!
+    type: object
+    properties:
+      status:
+        type: boolean
+      massage:
+        type: string
+    required:
+      - status
+      - massage
+tags:
+  - name: Tasks
+  - name: Categories Request
+  - name: Categories
